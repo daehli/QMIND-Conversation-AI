@@ -3,94 +3,267 @@ import {
   CodeSurferColumns,
   Step,
 } from "code-surfer";
-import { github, vsDark } from "@code-surfer/themes";
 
-export const theme = vsDark;
 
-# Hello 👋
+# Hello QMIND 👋
 
-You are using [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://codesurfer.pomb.us)
+🤖 Queens AI Hub 
+
+---
+### Hitchhiker’s guide to deploying digital assistants 🚶🏼‍♂️
 
 ---
 
 <CodeSurfer>
 
-```js title="This is a title" subtitle="and this a subtitle"
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
+```js title="Whoami"
+const person = {
 }
 ```
 
-```js
-function lorem(ipsum, dolor = 1) {
-  const sit = ipsum == null ? 0 : ipsum.sit;
-  dolor = sit - amet(dolor);
-  return sit
-    ? consectetur(ipsum, 0, dolor < 0 ? 0 : dolor)
-    : [];
-}
-
-function adipiscing(...elit) {
-  if (!elit.sit) {
-    return [];
-  }
-
-  const sed = elit[0];
-  return eiusmod.tempor(sed) ? sed : [sed];
-}
-
-function incididunt(ipsum, ut = 1) {
-  ut = labore.et(amet(ut), 0);
-  const sit = ipsum == null ? 0 : ipsum.sit;
-
-  if (!sit || ut < 1) {
-    return [];
-  }
-
-  let dolore = 0;
-  let magna = 0;
-  const aliqua = new eiusmod(labore.ut(sit / ut));
-
-  while (dolore < sit) {
-    aliqua[magna++] = consectetur(
-      ipsum,
-      dolore,
-      (dolore += ut)
-    );
-  }
-
-  return aliqua;
+```js title="Whoami"
+const person = {
+  firstName: "Daehli",
+  lastName: "Nadeau-Otis",
 }
 ```
 
-```diff 1[10:14],2[15:19],3[22:27],10:12
+```js title="Whoami"
+const person = {
+  firstName: "Daehli",
+  lastName: "Nadeau-Otis",
+  company: "Botpress",
+  JobTitle: "Developer Advocate",
+}
+```
+
+```js title="Whoami"
+const person = {
+  firstName: "Daehli",
+  lastName: "Nadeau-Otis",
+  company: "Botpress",
+  JobTitle: "Developer Advocate",
+  experience: "Full-stack Developer for 4 years now",
+  volunteer: "Les cyclistes-solidaires 🚴",
+  numberOfTalkGiven: 0
+}
+```
+
+</CodeSurfer>
+
+---
+# Chatbots
+
+Digital assistants, Chatops, Conversation AI = CHATBOT
+
+---
+
+# Botpress
+
+- Open source project
+- Framework
+- Developer Oriented
+- Fully customizable
+- More and more developer Close to 10K 🎉
+
+---
+## My relation with digital assistance 😂
+
+- [Matrix](https://github.com/maubot/maubot)
+- [kijiji](https://github.com/daehli/apartment-finder)
+
+---
+
+<Image src="https://i.kym-cdn.com/entries/icons/original/000/005/574/takemymoney.jpg" />
+
+---
+
+<CodeSurfer>
+
+```js title="Workshop"
+const requirements = [
+
+]
+```
+
+```js title="Workshop"
+const requirements = [
+  "Git",
+  "Docker",
+  "Docker-compose",
+  "Unix",
+  "CLI",
+  "Fun😅"
+]
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```bash title="Start Botpress"
+```
+
+```bash title="Start Botpress" subtitle="with Docker"
+$ docker run -p 3000:3000 --rm -it botpress/server:latest
+```
+
+```bash title="Start Botpress" subtitle="with the binary"
+$ wget https://s3.amazonaws.com/botpress-binaries/botpress-v12_26_4-linux-x64.zip
+$ unzip botpress-v12_26_4-linux-x64.zip
+$ ./bp
+```
+</CodeSurfer>
+
+---
+
+# Domain
+
+I bought a domain name `learnbotpress.com`
+
+---
+
+<CodeSurfer>
+
+```bash title="SSH connection"
+$ ssh -i "~/.ssh/Botpress-daehli.pem" ubuntu@learnbotpress.com
+```
+
+```bash title="Clone the botpress projet"
+$ git clone https://github.com/botpress/botpress.git
+```
+
+
+```bash title="Clone the botpress projet" subtitle="Enter the project"
+$ git clone https://github.com/botpress/botpress.git
+$ cd botpress
+```
+
+
+```bash title="Clone the botpress projet" subtitle="Deploying the https docker-compose"
+$ git clone https://github.com/botpress/botpress.git
+$ cd botpress
+$ cd examples/docker-compose
+$ cat docker-compose-community-nginx-https.yaml
+```
+
+</CodeSurfer>
+
+---
+<CodeSurfer>
+
+```bash title="Docker-compose file" subtitle="Version"
+version: '3'
+```
+
+```bash title="Docker-compose file" subtitle="Services"
+version: '3'
+services:
+  botpress:
+  postgres:
+  nginx:
+```
+
+```bash title="Docker-compose file" subtitle="What's inside those Services"
+version: '3'
+services:
+  botpress:
+    image: botpress/server
+  postgres:
+    image: postgres:11.2-alpine
+  nginx:
+    image: jonasal/nginx-certbot:latest
+```
+
+```bash title="Docker-compose file" subtitle="Environment variable"
+version: '3'
+services:
+  botpress:
+    image: botpress/server
+    environment:
+      - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
+      - EXTERNAL_URL=https://learnbotpress.com
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      PGPORT: 5435
+      POSTGRES_DB: botpress_db
+      POSTGRES_PASSWORD: secretpw
+      POSTGRES_USER: postgres
+
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    environment:
+      - CERTBOT_EMAIL=YOUR_EMAIL@DOMAIN.COM
+
+```
+
+```bash title="Docker-compose file" subtitle="Ports"
+version: '3'
+services:
+  botpress:
+    image: botpress/server
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
+      - EXTERNAL_URL=https://learnbotpress.com
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      PGPORT: 5435
+      POSTGRES_DB: botpress_db
+      POSTGRES_PASSWORD: secretpw
+      POSTGRES_USER: postgres
+
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - CERTBOT_EMAIL=YOUR_EMAIL@DOMAIN.COM
+
+```
+
+```bash title="Docker-compose file" subtitle="Volumes"
+version: '3'
+services:
+  botpress:
+    image: botpress/server
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
+      - EXTERNAL_URL=https://learnbotpress.com
+    volumes:
+      - ./build/botpress/data:/botpress/data
+
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      PGPORT: 5435
+      POSTGRES_DB: botpress_db
+      POSTGRES_PASSWORD: secretpw
+      POSTGRES_USER: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - CERTBOT_EMAIL=YOUR_EMAIL@DOMAINE.COM
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./nginx/user_conf.d:/etc/nginx/user_conf.d
 
 ```
 
@@ -98,55 +271,68 @@ function incididunt(ipsum, ut = 1) {
 
 ---
 
-<CodeSurferColumns themes={[vsDark, github]}>
+<CodeSurfer>
 
-<Step>
-
-```js
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+```bash title='Modified variable'
 ```
 
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
+```bash title='Modified variable' subtitle='HTTPS authentification'
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/example.com/g' nginx/user_conf.d/https.conf
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/example.com/g' docker-compose-community-nginx-https.yaml
 ```
 
-</Step>
-
-<Step>
-
-```js
-const lorem = (ipsum, dolor, sit) => {
-  const amet = dolor - ipsum;
-  return consectetur.adipiscing(
-    {
-      elit: sed.eiusmod(sit - dolor) / amet + 2,
-    },
-    (tempor, incididunt) => ipsum + amet * incididunt
-  );
-};
-
-const magna = aliqua => aliqua.ut((enim, ad) => enim, 0);
+```bash title='Modified variable' subtitle='HTTPS authentification Example'
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/learnbotpress.com/g' nginx/user_conf.d/https.conf
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/learnbotpress.com/g' docker-compose-community-nginx-https.yaml
 ```
 
-```js
-const minim = (ad, enim) => dolore.magna(ad / enim);
 
-const sed = (eiusmod, tempor, incididunt) => {
-  const ut = tempor - eiusmod;
-  return labore.et(
-    {
-      amet: dolore.magna(incididunt - tempor) / ut + 2,
-    },
-    (aliqua, elit) => eiusmod + ut * elit
-  );
-};
+```bash title='Modified variable' subtitle='Certbot email'
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/learnbotpress.com/g' nginx/user_conf.d/https.conf
+$ sed -i 's/$PLACE_HOLDER_DOMAIN_NAME/learnbotpress.com/g' docker-compose-community-nginx-https.yaml
+$ sed -i 's/CERTBOT_EMAIL=YOUR_EMAIL@DOMAINE.COM/CERTBOT_EMAIL=botpress@botpress.com/g' docker-compose-community-nginx-https.yaml 
 ```
 
-</Step>
-
-</CodeSurferColumns>
+</CodeSurfer>
 
 ---
 
-docs:  
-[codesurfer.pomb.us](https://codesurfer.pomb.us)
+# Demo
+
+
+---
+
+# Botpress
+
+- General interface
+- QnA
+- Intent&Slot (AI)
+- Flow
+- Action
+- Content-type
+- Customization 
+
+---
+
+## What I didn't convert
+
+- How to Design Flow
+- Migration
+- SaaS ? 
+
+---
+
+# Question 🤔
+
+I will be sad if you don't have question. 
+
+
+But it's ok :)
+
+---
+
+Reference
+
+[Docs](https://botpress.com/docs)
+[Forum](https://forum.botpress.com/)
+[Slide](bit.ly)
