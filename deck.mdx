@@ -1,7 +1,5 @@
 import {
   CodeSurfer,
-  CodeSurferColumns,
-  Step,
 } from "code-surfer";
 
 
@@ -13,6 +11,20 @@ import {
 ### Hitchhiker’s guide to deploying digital assistants 🚶🏼‍♂️
 
 ---
+# 🤖
+
+Has anyone built a chatbot recently? 
+
+---
+
+## What you will learn today
+
+- Start Botpress
+- Learn the basic component of botpress
+- Train an AI for chatbot
+
+---
+
 
 <CodeSurfer>
 
@@ -33,7 +45,7 @@ const person = {
   firstName: "Daehli",
   lastName: "Nadeau-Otis",
   company: "Botpress",
-  JobTitle: "Developer Advocate",
+  jobTitle: "Developer Advocate",
 }
 ```
 
@@ -42,7 +54,7 @@ const person = {
   firstName: "Daehli",
   lastName: "Nadeau-Otis",
   company: "Botpress",
-  JobTitle: "Developer Advocate",
+  jobTitle: "Developer Advocate",
   experience: "Full-stack Developer for 4 years now",
   volunteer: "Les cyclistes-solidaires 🚴",
   numberOfTalkGiven: 0
@@ -64,13 +76,13 @@ Digital assistants, Chatops, Conversation AI = CHATBOT
 - Framework
 - Developer Oriented
 - Fully customizable
-- More and more developer Close to 10K 🎉
+- More and more developer Close to 10K ⭐
 
 ---
 ## My relation with digital assistance 😂
 
-- [Matrix](https://github.com/maubot/maubot)
-- [kijiji](https://github.com/daehli/apartment-finder)
+- [Matrix 🎲](https://github.com/maubot/maubot)
+- [kijiji🗺️](https://github.com/daehli/apartment-finder)
 
 ---
 
@@ -121,7 +133,7 @@ $ ./bp
 
 # Domain
 
-I bought a domain name `learnbotpress.com`
+I bought a domain name: `learnbotpress.com`
 
 ---
 
@@ -206,8 +218,6 @@ version: '3'
 services:
   botpress:
     image: botpress/server
-    ports:
-      - "3000:3000"
     environment:
       - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
       - EXTERNAL_URL=https://learnbotpress.com
@@ -235,8 +245,6 @@ version: '3'
 services:
   botpress:
     image: botpress/server
-    ports:
-      - "3000:3000"
     environment:
       - DATABASE_URL=postgres://postgres:secretpw@postgres:5435/botpress_db
       - EXTERNAL_URL=https://learnbotpress.com
@@ -306,7 +314,7 @@ $ sed -i 's/CERTBOT_EMAIL=YOUR_EMAIL@DOMAINE.COM/CERTBOT_EMAIL=botpress@botpress
 
 - General interface
 - QnA
-- Intent&Slot (AI)
+- Intent, Utterance and entities (AI)
 - Flow
 - Action
 - Content-type
@@ -314,11 +322,10 @@ $ sed -i 's/CERTBOT_EMAIL=YOUR_EMAIL@DOMAINE.COM/CERTBOT_EMAIL=botpress@botpress
 
 ---
 
-## What I didn't convert
+## What I didn't cover
 
 - How to Design Flow
 - Migration
-- SaaS ? 
 
 ---
 
@@ -331,7 +338,7 @@ But it's ok :)
 
 ---
 
-Reference
+📖 Reference
 
 [Docs](https://botpress.com/docs)
 [Forum](https://forum.botpress.com/)
