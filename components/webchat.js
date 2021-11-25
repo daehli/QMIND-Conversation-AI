@@ -18,7 +18,11 @@ const WebChat = props => {
         window.botpressWebChat.init({
             host: props.host,
             botId: props.botID,
+            useSessionStorage: true,
+            enablePersistHistory: false,
             hideWidget: false,
+            avatarUrl: "https://www.nicepng.com/png/full/35-356045_microsoft-windows-compatible-icon-windows-95-logo-png.png",
+            botName: "Microsoft - Paper Clip",
             extraStylesheet: `${props.host}/assets/modules/form-module/webchat-style.css`,
         });
         window.addEventListener("message", function (event) {
