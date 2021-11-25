@@ -1,23 +1,18 @@
-# MDX Deck + Code Surfer template
+# Slide for QMIND Workshop
 
-This project was generated with the `npm init code-surfer-deck` command.
+I did a workshop for the QMIND student association. It was an introduction to botpress on how to use botpress as a conversation AI (chatbot)
 
-## Development
+## What you will find in  this presentation?
 
-To run the presentation deck in development mode:
+- All the command to start a botpress instance that is running on https.
+- In the assets you will find 2 chatbots.
+    - The paper-clip bot is used inside the slide
+    - The order-status-demo, is as the demo.
 
-```sh
-npm start
+
+## Start the presentation
+
 ```
-
-Edit the [`deck.mdx`](deck.mdx) file to get started.
-
-## Exporting
-
-To build the presentation deck:
-
-```sh
-npm run build
+$ yarn install
+$ yarn run start
 ```
-
-For more documentation see [MDX Deck](https://github.com/jxnblk/mdx-deck) and [Code Surfer](https://codesurfer.pomb.us/)
